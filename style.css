@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline-e{
+    display: inline;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+#main{
+    border: 2px solid black;
+    height: auto;
+    width: 35vw;
+    flex-direction: column;
+}
+
+#main .heading{
+    margin: 30px 0px;
+}
+
+#main .score{
+    gap: 30px; 
+    /* border: 2px solid red; */
+    margin: 20px 0px;
+}
+
+#main .score .pla_s{
+    padding: 12px 16px;
+    /* border: 2px solid black; */
+}
+
+#main .display_round{
+    margin: 18px;
+}
+
+#main .game{
+    flex-direction: column;
+    gap: 13px;
+}
+
+#main .game #num{
+    height: 50px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+#main .game .btn{
+    height: 45px;
+    width: 135px;
+    border: 2px solid black;
+    font-size: 20px;    
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#main .game .btn:hover{
+    color:white;
+}
+
+#main .game .btn::before{
+    content: '';
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+#main .game .btn:hover::before{
+    width: 100%;
+}
+
+.active{
+    border-bottom: 2px solid black;
+    background-color: white;
+}
+
+.display{
+    font-size: 25px;
+    margin: 7px 0px;
+    height: 30px;
+    width: 100%;
+    display: block;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+
+.score-table{
+    height: auto;
+    width: 100%;
+    /* border: 2px solid green; */
+    flex-direction: column;
+    padding: 17px;
+    gap: 20px;
+}
+
+.score-table .score_board{
+    height: 100px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.score_board .row{
+    width: 100%;
+    height: 50px;
+    /* border: 2px solid red; */
+    display: flex;
+}
+
+.score_board .row_h{
+    height: 100%;
+    width: 200px;
+    /* border: 2px solid black; */
+}
+
+.score_board .s_p{
+    height: 100%;
+    width: 100px;
+    /* border: 2px solid red; */
+}
+
+.massege{
+    height: 0%;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.massege .win_massege{
+    font-size: 88px;
+    font-weight: 700;
+}
+
+.massege .reset_btn{
+    height: 50px;
+    width: 150px;
+    border: 2px solid black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.massege .reset_btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.display_massege{
+    height: 100%;
+    visibility: visible;
+}
+
+@media (max-width : 480px){
+    #main{
+        height: 111vh;
+        width: 100%;
+    }    
+    .massege .win_massege{
+        text-align: center;
+        font-size: xxx-large;
+    }
+}
+
+@media (max-width : 768px){
+    #main{
+        width: 100%;
+        height: 111vh;
+    }
+    .massege .win_massege{
+        text-align: center;
+    }
+}
