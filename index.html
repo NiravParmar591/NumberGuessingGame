@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex-box">
+    <div id="main" class="flex-box">
+        <h1 class="heading">number guessing game</h1>
+        <div class="display_round">
+            <h4 style="display: inline;">round : </h4>
+            <span class="num_round">1</span>/3
+        </div>
+        <div class="display_moves">
+            <h4 class="inline-e">moves : </h4>
+            <span class="num_moves">0</span>
+        </div>
+        <div class="score flex-box">
+            <div class="player1 pla_s active">
+                <h3 class="inline-e">player 1</h3>
+                <!-- <span class="s_p1">0</span> -->
+            </div>
+            <div class="player2 pla_s">
+                <h3 class="inline-e">player 2</h3>
+                <!-- <span class="s_p2">0</span> -->
+            </div>
+        </div>
+        <div class="game flex-box">
+            <!-- <label for="num">Enter the number </label> -->
+            <input type="text" id="num" placeholder="guess the number 1 to 100">
+            <div class="btn flex-box">Submit</div>
+            <div class="display"></div>
+        </div>
+        <div class="score-table flex-box">
+            <h3>SCORE BOARD</h3>
+            <div class="score_board">
+                <div class="row1 row">
+                    <div class="row_h flex-box">player1</div>
+                    <span class="s_p1 s_p flex-box">0</span>
+                </div>
+                <div class="row2 row">
+                    <div class="row_h flex-box">player2</div>
+                    <span class="s_p2 s_p flex-box">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="massege">
+        <div class="win_massege"></div>
+        <input type="button" value="Restart Game" class="reset_btn">
+    </div>
+    <script src="script.js"></script>
+    <!-- https://github.com/NiravParmar3654/NumberGuessGame.git -->
+</body>
+
+</html>
