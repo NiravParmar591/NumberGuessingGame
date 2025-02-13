@@ -111,7 +111,7 @@ const check_round_winner = () => {
 }
 
 const check_winner = () => {
-    if (round > 1) {
+    if (round > 3) {
         massage.classList.add("display_massege");
 
         if (player1_score > player2_score) {
